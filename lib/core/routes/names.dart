@@ -1,6 +1,11 @@
- 
-    library route_names;
-    class RoutesName {
-        static const initial = '/';
-        static const home = '/home';
-    }
+library route_names;
+
+enum RouteName {
+  home("/home"),
+  auth("/auth"),
+  splash("/splash");
+
+  const RouteName(this.route);
+
+  final String route;
+}
