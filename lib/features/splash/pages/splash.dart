@@ -18,7 +18,7 @@ class SplashPage extends StatelessWidget {
           if (state == SplashState.authenticated) {
             AppNavigator.pushReplacementNamed(context, RouteName.home);
           } else if (state == SplashState.unauthenticated) {
-            AppNavigator.pushReplacementNamed(context, RouteName.auth);
+            AppNavigator.pushReplacementNamed(context, RouteName.signin);
           }
         },
         child: Stack(

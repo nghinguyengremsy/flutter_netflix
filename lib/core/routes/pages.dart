@@ -1,10 +1,10 @@
 library route_pages;
 
 import 'package:flutter/material.dart';
-import '../../features/auth/presentation/pages/pages.dart';
+import '../../features/auth/presentation/pages/sign_in.dart';
+import '../../features/auth/presentation/pages/sign_up.dart';
 import '../../features/splash/pages/splash.dart';
 import '../../src/features/home/presentation/pages/pages.dart';
-import '../error/error.dart';
 import 'routes.dart';
 
 class AppRoute {
@@ -16,11 +16,18 @@ class AppRoute {
           return const SplashPage();
         },
       );
-    } else if (settings?.name == RouteName.auth.route) {
+    } else if (settings?.name == RouteName.signin.route) {
       return PageRouteBuilder(
         pageBuilder: (BuildContext context, Animation<double> animation,
             Animation<double> secondaryAnimation) {
-          return const AuthPage();
+          return SignInPage();
+        },
+      );
+    } else if (settings?.name == RouteName.signup.route) {
+      return PageRouteBuilder(
+        pageBuilder: (BuildContext context, Animation<double> animation,
+            Animation<double> secondaryAnimation) {
+          return SignupPage();
         },
       );
     } else if (settings?.name == RouteName.home.route) {

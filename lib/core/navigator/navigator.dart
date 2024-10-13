@@ -7,14 +7,15 @@ class AppNavigator {
     Navigator.pushReplacementNamed(context, routeEnum.route);
   }
 
-  static void push(BuildContext context, RouteName routeEnum) {
+  static void pushNamed(BuildContext context, RouteName routeEnum) {
     Navigator.pushNamed(context, routeEnum.route);
   }
 
-  static void pushAndRemove(BuildContext context, Widget widget) {
-    Navigator.pushAndRemoveUntil(
+  static void pushNamedAndRemoveUntil(
+      BuildContext context, RouteName routeEnum) {
+    Navigator.pushNamedAndRemoveUntil(
         context,
-        MaterialPageRoute(builder: (context) => widget),
+        routeEnum.route,
         (Route<dynamic> route) => false);
   }
 }
