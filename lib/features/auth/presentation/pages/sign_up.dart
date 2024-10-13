@@ -1,11 +1,14 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
 import 'package:reactive_button/reactive_button.dart';
 
 import '../../../../core/navigator/navigator.dart';
 import '../../../../core/routes/names.dart';
 import '../../../../core/services/services.dart';
 import '../../../../core/theme/theme.dart';
+import '../../data/models/signup_req_params.dart';
+import '../../domain/usecases/signup_usecase.dart';
 
 class SignupPage extends StatelessWidget {
   SignupPage({super.key});
@@ -70,13 +73,11 @@ class SignupPage extends StatelessWidget {
     return ReactiveButton(
         title: 'Sign Up',
         activeColor: AppColors.primary,
-        // onPressed: () async => sl<SignupUseCase>().call(
-        //       params: SignupReqParams(
-        //           email: _emailCon.text, password: _passwordCon.text),
-        //     ),
-        onPressed: () async {
-          return true;
-        },
+        onPressed: () async => GetIt.I<SignupUseCase>().call(
+              SignupReqParams(
+                  email: _emailCon.text, password: _passwordCon.text),
+            ),
+
         onSuccess: () {
           AppNavigator.pushNamedAndRemoveUntil(context, RouteName.home);
         },

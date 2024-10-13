@@ -1,5 +1,8 @@
 
-    library config;
-    export 'injection.dart';
-    export 'keyboard.dart';
-    
+library config;
+
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+part "./api_url.dart";
+part "./injection.dart";
+part "./keyboard.dart";
