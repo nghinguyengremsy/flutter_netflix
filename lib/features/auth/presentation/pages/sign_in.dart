@@ -1,11 +1,14 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
 import 'package:reactive_button/reactive_button.dart';
 
 import '../../../../core/navigator/navigator.dart';
 import '../../../../core/routes/names.dart';
 import '../../../../core/services/services.dart';
 import '../../../../core/theme/theme.dart';
+import '../../data/models/signin_req_params.dart';
+import '../../domain/usecases/signin_usecase.dart';
 
 class SignInPage extends StatelessWidget {
   SignInPage({super.key});
@@ -70,18 +73,15 @@ class SignInPage extends StatelessWidget {
     return ReactiveButton(
       title: 'Sign In',
       activeColor: AppColors.primary,
-      // onPressed: () async => sl<SigninUseCase>().call(
-      //     params: SigninReqParams(
-      //         email: _emailCon.text, password: _passwordCon.text)),
+      onPressed: () async => GetIt.I<SigninUsecase>().call(
+          SigninReqParams(email: _emailCon.text, password: _passwordCon.text)),
       onSuccess: () {
         AppNavigator.pushNamedAndRemoveUntil(context, RouteName.home);
       },
       onFailure: (error) {
         DisplayMessage.errorMessage(error, context);
       },
-      onPressed: () async {
-        return true;
-      },
+    
     );
   }
 

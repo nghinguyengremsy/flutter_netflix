@@ -6,10 +6,10 @@ import '../../../../core/usecases/usecases.dart';
 import '../../data/models/signup_req_params.dart';
 import '../repositories/repositories.dart';
 
-class SignupUseCase extends UseCase<Either, SignupReqParams> {
+class SignupUsecase extends UseCase<Either, SignupReqParams> {
   final AuthRepository _repository;
 
-  SignupUseCase(this._repository);
+  SignupUsecase(this._repository);
 
   @override
   FutureOr<Either> call(SignupReqParams params) {

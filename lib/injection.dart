@@ -4,6 +4,7 @@ import 'core/network/network.dart';
 import 'features/auth/data/repositories/auth_repository.dart';
 import 'features/auth/data/sources/auth_api_service.dart';
 import 'features/auth/domain/repositories/repositories.dart';
+import 'features/auth/domain/usecases/signin_usecase.dart';
 import 'features/auth/domain/usecases/signup_usecase.dart';
 
 void injectDependencies() {
@@ -18,5 +19,8 @@ void injectDependencies() {
   s1.registerLazySingleton<AuthRepository>(() => AuthRepositoryImpl(s1()));
 
   /// Usecases
-  s1.registerLazySingleton<SignupUseCase>(() => SignupUseCase(s1()));
+  s1.registerLazySingleton<SignupUsecase>(() => SignupUsecase(s1()));
+
+  s1.registerLazySingleton<SigninUsecase>(() => SigninUsecase(s1()));
+
 }

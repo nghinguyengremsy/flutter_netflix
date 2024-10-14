@@ -73,7 +73,7 @@ class SignupPage extends StatelessWidget {
     return ReactiveButton(
         title: 'Sign Up',
         activeColor: AppColors.primary,
-        onPressed: () async => GetIt.I<SignupUseCase>().call(
+        onPressed: () async => GetIt.I<SignupUsecase>().call(
               SignupReqParams(
                   email: _emailCon.text, password: _passwordCon.text),
             ),
