@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../../core/assets/assets.dart';
 import '../../../../core/widgets/widgets.dart';
+import '../../../movie/presentation/pages/trending_movies.dart';
 import '../widgets/widgets.dart';
 
 class HomePage extends StatelessWidget {

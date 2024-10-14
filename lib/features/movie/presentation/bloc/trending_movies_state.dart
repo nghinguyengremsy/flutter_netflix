@@ -1,4 +1,4 @@
-import '../../../movie/domain/entities/movie.dart';
+import '../../domain/entities/movie.dart';
 
 abstract class TrendingMoviesState {
   const TrendingMoviesState();
