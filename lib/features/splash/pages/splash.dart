@@ -16,9 +16,9 @@ class SplashPage extends StatelessWidget {
       body: BlocListener<SplashCubit, SplashState>(
         listener: (BuildContext context, SplashState state) {
           if (state == SplashState.authenticated) {
-            AppNavigator.pushReplacementNamed(context, RouteName.home);
+            AppNavigator.pushNamedAsRoot(context, RouteName.home);
           } else if (state == SplashState.unauthenticated) {
-            AppNavigator.pushReplacementNamed(context, RouteName.signin);
+            AppNavigator.pushNamedAsRoot(context, RouteName.signin);
           }
         },
         child: Stack(

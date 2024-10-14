@@ -79,7 +79,7 @@ class SignupPage extends StatelessWidget {
             ),
 
         onSuccess: () {
-          AppNavigator.pushNamedAndRemoveUntil(context, RouteName.home);
+          AppNavigator.pushNamedAsRoot(context, RouteName.home);
         },
         onFailure: (error) {
           DisplayMessage.errorMessage(error, context);

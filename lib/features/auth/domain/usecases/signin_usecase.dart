@@ -4,7 +4,7 @@ import 'package:dartz/dartz.dart';
 
 import '../../../../core/usecases/usecases.dart';
 import '../../data/models/signin_req_params.dart';
-import '../repositories/repositories.dart';
+import '../repositories/auth_repository.dart';
 
 class SigninUsecase extends UseCase<Either, SigninReqParams> {
   SigninUsecase(this._repo);

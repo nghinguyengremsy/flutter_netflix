@@ -6,5 +6,5 @@ import '../../data/models/signup_req_params.dart';
 abstract class AuthRepository {
   Future<Either> signUp(SignupReqParams params);
   Future<Either> signIn(SigninReqParams params);
-
+  Future<bool> isLoggedIn();
 }

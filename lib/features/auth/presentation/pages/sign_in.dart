@@ -76,7 +76,7 @@ class SignInPage extends StatelessWidget {
       onPressed: () async => GetIt.I<SigninUsecase>().call(
           SigninReqParams(email: _emailCon.text, password: _passwordCon.text)),
       onSuccess: () {
-        AppNavigator.pushNamedAndRemoveUntil(context, RouteName.home);
+        AppNavigator.pushNamedAsRoot(context, RouteName.home);
       },
       onFailure: (error) {
         DisplayMessage.errorMessage(error, context);

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import '../../features/auth/presentation/pages/sign_in.dart';
 import '../../features/auth/presentation/pages/sign_up.dart';
 import '../../features/splash/pages/splash.dart';
-import '../../src/features/home/presentation/pages/pages.dart';
+import '../../features/home/presentation/pages/pages.dart';
 import 'routes.dart';
 
 class AppRoute {

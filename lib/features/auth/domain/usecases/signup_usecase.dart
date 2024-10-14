@@ -4,7 +4,7 @@ import 'package:dartz/dartz.dart';
 
 import '../../../../core/usecases/usecases.dart';
 import '../../data/models/signup_req_params.dart';
-import '../repositories/repositories.dart';
+import '../repositories/auth_repository.dart';
 
 class SignupUsecase extends UseCase<Either, SignupReqParams> {
   final AuthRepository _repository;

@@ -11,7 +11,7 @@ class AppNavigator {
     Navigator.pushNamed(context, routeEnum.route);
   }
 
-  static void pushNamedAndRemoveUntil(
+  static void pushNamedAsRoot(
       BuildContext context, RouteName routeEnum) {
     Navigator.pushNamedAndRemoveUntil(
         context,
