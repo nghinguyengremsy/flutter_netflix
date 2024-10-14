@@ -3,11 +3,11 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../models/signin_req_params.dart';
 import '../models/signup_req_params.dart';
-import '../sources/auth_api_service.dart';
+import '../sources/auth_service.dart';
 import '../../domain/repositories/auth_repository.dart';
 
 class AuthRepositoryImpl implements AuthRepository {
-  final AuthApiService _authApiService;
+  final AuthService _authApiService;
   AuthRepositoryImpl(this._authApiService);
 
   @override

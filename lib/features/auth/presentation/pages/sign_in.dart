@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:reactive_button/reactive_button.dart';
 
+import '../../../../core/constants/colors.dart';
 import '../../../../core/navigator/navigator.dart';
 import '../../../../core/routes/names.dart';
 import '../../../../core/services/services.dart';
-import '../../../../core/theme/theme.dart';
 import '../../data/models/signin_req_params.dart';
 import '../../domain/usecases/signin_usecase.dart';
 

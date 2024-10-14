@@ -7,13 +7,13 @@ import '../../../../core/network/network.dart';
 import '../models/signin_req_params.dart';
 import '../models/signup_req_params.dart';
 
-abstract class AuthApiService {
+abstract class AuthService {
   Future<Either> signUp(SignupReqParams params);
   Future<Either> signIn(SigninReqParams params);
 
 }
 
-class AuthApiServiceImpl extends AuthApiService {
+class AuthServiceImpl extends AuthService {
   @override
   Future<Either> signUp(SignupReqParams params) async {
     try {

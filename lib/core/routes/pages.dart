@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import '../../features/auth/presentation/pages/sign_in.dart';
 import '../../features/auth/presentation/pages/sign_up.dart';
 import '../../features/splash/pages/splash.dart';
-import '../../features/home/presentation/pages/pages.dart';
+import '../../features/home/presentation/pages/home.dart';
 import 'routes.dart';
 
 class AppRoute {
@@ -41,7 +41,7 @@ class AppRoute {
       return PageRouteBuilder(
         pageBuilder: (BuildContext context, Animation<double> animation,
             Animation<double> secondaryAnimation) {
-          return const SplashPage();
+          return const SizedBox();
         },
       );
     }
